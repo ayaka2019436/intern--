@@ -1,57 +1,57 @@
+<mat-toolbar color="primary">
+  <span>読んだ本</span>
+  <span class="spacer">一覧</span>
+</mat-toolbar>
 
-<mat-card class="sample">
-  <mat-card-content>
-    <H1>書籍登録</H1>
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title class="textmax"> 書籍登録 </mat-card-title>
+  </mat-card-header>
+  <form class="form">
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <mat-label>書籍名</mat-label>
+        <input matInput placeholder="書籍名を記入" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>あらすじ</mat-label>
+        <textarea matInput placeholder="あらすじを記入"></textarea>
+      </mat-form-field>
 
-    <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <mat-label>書籍名</mat-label>
-      <input matInput placeholder="書籍名を記入">
-    </mat-form-field>
-
-<br>
-
-<mat-form-field class="example-full-width">
-  <mat-label>あらすじ</mat-label>
-  <textarea matInput placeholder="あらすじを記入"></textarea>
-</mat-form-field>
-
-<br>
-
-<mat-form-field class="example-width">
-  <mat-label>評価点</mat-label>
-  <input matInput>
-</mat-form-field>
-</form>
-
-<br>
-
-<div class="example">
-      <button mat-raised-button color="primary">追加</button>
-</div>
-  </mat-card-content>
+      <mat-form-field class="half-width">
+        <mat-label>評価点</mat-label>
+        <input matInput placeholder="評価点を記入" />
+      </mat-form-field>
+    </mat-card-content>
+  </form>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="primary">追加</button>
+  </mat-card-actions>
 </mat-card>
-<mat-card class="sample">
-  <mat-card-content>
+<mat-card class="card">
+  <mat-card-header>
     <mat-card-title>アンドロイドは電気羊の夢を見るか？</mat-card-title>
-    <mat-card-subtitle class="color">
-      第三次世界大戦後の未来、サンフランシスコを舞台に賞金稼ぎ賞金稼ぎのリック•デッカードが、火星から逃亡してきたアンドロイドを「処理」するというあらすじ
-    </mat-card-subtitle>
-    <mat-card-subtitle class="color">評価点：９０点</mat-card-subtitle>
-    <div class="example">
-      <button mat-raised-button color="warn">削除</button>
-    </div>
-  </mat-card-content>
-</mat-card>
-<br>
-<mat-card class="sample">
+  </mat-card-header>
   <mat-card-content>
-    <mat-card-title>岩田さん：岩田聡はこんなことを話していた。</mat-card-title>
-    <mat-card-subtitle class="color">任天堂の元社長、岩田聡さんのことばをまとめた本</mat-card-subtitle>
-    <mat-card-subtitle class="color">評価点：９０点</mat-card-subtitle>
-    <div class="example">
-      <button mat-raised-button color="warn">削除</button>
-    </div>
+    <p class="textmin">
+      第三次世界大戦後の未来、サンフランシスコを舞台に賞金稼ぎ賞金稼ぎのリック•デッカードが、火星から逃亡してきたアンドロイドを「処理」するというあらすじ
+    </p>
+    <p class="textmin">評価点：９０点</p>
   </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="warn">削除</button>
+  </mat-card-actions>
 </mat-card>
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>岩田さん：岩田聡はこんなことを話していた。</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="textmin">任天堂の元社長、岩田聡さんのことばをまとめた本</p>
+    <p class="textmin">評価点：９０点</p>
+  </mat-card-content>
 
+  <mat-card-actions align="end">
+    <button mat-raised-button color="warn">削除</button>
+  </mat-card-actions>
+</mat-card>

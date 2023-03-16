@@ -1,23 +1,31 @@
-.example-form {
+.form {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
 }
 
-.example-full-width {
+.full-width {
   width: 100%;
 }
-.example-width {
+.half-width {
   width: 50%;
 }
-.example{
+.right {
   text-align: right;
-}.text{
+}
+.text {
   line-height: 2;
 }
-.sample {
-  padding: 10px 10px 10px 10px;
+.card {
+  margin: 30px;
 }
-.color{
-  color: #000000;
+.spacer {
+  flex: 1 1 auto;
+  text-align: right;
+}
+.textmax {
+  font-size: 30px;
+}
+.textmin {
+  font-size: 12px;
 }
