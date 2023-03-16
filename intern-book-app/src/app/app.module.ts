@@ -11,12 +11,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { ComponentsComponent } from './components/components.component';
 
 const ROUTE_TABLE: Routes = [{ path: '', component: ListComponent }];
 
 @NgModule({
-  declarations: [AppComponent, ListComponent, ComponentsComponent],
+  declarations: [AppComponent, ListComponent],
   imports: [
     BrowserModule,
     MatCardModule,
