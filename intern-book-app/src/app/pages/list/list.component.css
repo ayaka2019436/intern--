@@ -19,13 +19,17 @@
 .card {
   margin: 30px;
 }
-.spacer {
-  flex: 1 1 auto;
-  text-align: right;
-}
+
 .textmax {
   font-size: 30px;
 }
 .textmin {
   font-size: 12px;
+}
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
 }
