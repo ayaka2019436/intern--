@@ -24,19 +24,4 @@
   </mat-card-actions>
 </mat-card>
 
-<ul class="ul">
-  <li class="li" *ngFor="let book of bookList">
-    <mat-card class="card">
-      <mat-card-header>
-        <mat-card-title>{{ book.name }}</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="textmin">{{ book.detail }}</p>
-        <p class="textmin">評価点：{{ book.evaluation }}点</p>
-      </mat-card-content>
-      <mat-card-actions align="end">
-        <button mat-raised-button color="warn">削除</button>
-      </mat-card-actions>
-    </mat-card>
-  </li>
-</ul>
+<app-card [bookList]="bookList"></app-card>
