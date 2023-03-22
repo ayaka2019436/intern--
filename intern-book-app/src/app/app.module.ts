@@ -9,11 +9,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { CardComponent } from './components/card/card.component';
 
 const ROUTE_TABLE: Routes = [{ path: '', component: ListComponent }];
 
 @NgModule({
-  declarations: [AppComponent, ListComponent],
+  declarations: [AppComponent, ListComponent, ToolbarComponent, CardComponent],
   imports: [
     BrowserModule,
     MatCardModule,
@@ -21,6 +25,8 @@ const ROUTE_TABLE: Routes = [{ path: '', component: ListComponent }];
     MatInputModule,
     MatButtonModule,
     MatFormFieldModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
