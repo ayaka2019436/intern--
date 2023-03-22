@@ -20,4 +20,5 @@ export class ListComponent {
       evaluation: 90,
     },
   ];
+  today: string = '2023/03/22';
 }

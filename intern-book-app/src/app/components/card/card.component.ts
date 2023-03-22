@@ -7,5 +7,6 @@ import { Book } from 'src/app/types/book';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent {
-  @Input() bookList: Book[] = [];
+  @Input() book?: Book;
+  @Input() date?: string;
 }
