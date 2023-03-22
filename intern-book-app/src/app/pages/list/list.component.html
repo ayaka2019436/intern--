@@ -24,4 +24,4 @@
   </mat-card-actions>
 </mat-card>
 
-<app-card [bookList]="bookList"></app-card>
+<app-card *ngFor="let book of bookList" [book]="book" [date]="today"></app-card>
