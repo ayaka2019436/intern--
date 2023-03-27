@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CardComponent } from './components/card/card.component';
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 const ROUTE_TABLE: Routes = [{ path: '', component: ListComponent }];
 
@@ -27,6 +28,7 @@ const ROUTE_TABLE: Routes = [{ path: '', component: ListComponent }];
     MatFormFieldModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

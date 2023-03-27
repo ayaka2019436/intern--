@@ -7,6 +7,9 @@ import { Book } from 'src/app/types/book';
   styleUrls: ['./list.component.css'],
 })
 export class ListComponent {
+  // bookName = '';
+  // bookummary = '';
+  // bookScore = 0;
   bookList: Book[] = [
     {
       name: 'アンドロイドは電気羊の夢を見るか？',
@@ -20,5 +23,18 @@ export class ListComponent {
       evaluation: 90,
     },
   ];
+  book: Book = {
+    name: '',
+    detail: '',
+    evaluation: 0,
+  };
   today: string = '2023/03/22';
+  test() {
+    // console.log(this.book);
+    this.bookList.push({
+      name: this.book.name,
+      detail: this.book.detail,
+      evaluation: this.book.evaluation,
+    });
+  }
 }
