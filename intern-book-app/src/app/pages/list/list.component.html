@@ -18,8 +18,8 @@
         <mat-label>あらすじ</mat-label>
         <textarea
           matInput
-          id="ara"
-          name="ara"
+          id="detail"
+          name="detail"
           [(ngModel)]="book.detail"
           placeholder="あらすじを記入"
         ></textarea>
@@ -29,8 +29,8 @@
         <mat-label>評価点</mat-label>
         <input
           matInput
-          id="ten"
-          name="ten"
+          id="score"
+          name="score"
           [(ngModel)]="book.evaluation"
           placeholder="評価点を記入"
         />
@@ -38,11 +38,9 @@
     </mat-card-content>
   </form>
   <mat-card-actions align="end">
-    <button mat-raised-button color="primary" (click)="test()">追加</button>
+    <button mat-raised-button color="primary" (click)="addBook()">追加</button>
   </mat-card-actions>
 </mat-card>
-<!-- <input [(ngModel)]="test2" />
-<button (click)="clickTest()">テスト</button> -->
 
 <app-card
   *ngFor="let book of bookList"
