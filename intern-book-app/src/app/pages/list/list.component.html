@@ -32,7 +32,6 @@
           id="ten"
           name="ten"
           [(ngModel)]="book.evaluation"
-          value=" "
           placeholder="評価点を記入"
         />
       </mat-form-field>
@@ -44,7 +43,9 @@
 </mat-card>
 <!-- <input [(ngModel)]="test2" />
 <button (click)="clickTest()">テスト</button> -->
-
+<div class="Nodeta" *ngIf="!bookList || bookList.length === 0">
+  データがありません
+</div>
 <app-card
   *ngFor="let book of bookList"
   [aBook]="book"

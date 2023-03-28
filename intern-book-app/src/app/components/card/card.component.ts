@@ -16,6 +16,5 @@ export class CardComponent {
   @Output() deleteBook = new EventEmitter<Book>();
   Delete() {
     this.deleteBook.emit(this.aBook);
-    // console.log(this.aBook);
   }
 }
