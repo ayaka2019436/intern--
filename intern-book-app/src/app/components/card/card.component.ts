@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Book } from 'src/app/types/book';
 
 @Component({
@@ -13,4 +13,9 @@ export class CardComponent {
     evaluation: 0,
   };
   @Input() date?: string;
+  @Output() deleteBook = new EventEmitter<Book>();
+  Delete() {
+    this.deleteBook.emit(this.aBook);
+    console.log(this.aBook);
+  }
 }

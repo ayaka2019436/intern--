@@ -38,6 +38,12 @@ export class ListComponent {
       evaluation: this.book.evaluation,
     });
   }
+  Delete(book: Book) {
+    this.bookList = this.bookList.filter((b) => b.name !== book.name);
+    // delete this.bookList.name
+    // delete book.detail;
+    // delete book.evaluation;
+  }
   // public test2 = 'test';
   // clickTest() {
   //   console.log(this.test2);

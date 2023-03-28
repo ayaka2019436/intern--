@@ -48,4 +48,5 @@
   *ngFor="let book of bookList"
   [aBook]="book"
   [date]="today"
+  (deleteBook)="Delete($event)"
 ></app-card>
