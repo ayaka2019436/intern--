@@ -30,6 +30,7 @@ export class ListComponent {
   };
   today: string = '2023/03/22';
   test() {
+    this.bookList.push(this.book);
     // console.log(this.book);
     this.bookList.push({
       name: this.book.name,
@@ -37,4 +38,8 @@ export class ListComponent {
       evaluation: this.book.evaluation,
     });
   }
+  // public test2 = 'test';
+  // clickTest() {
+  //   console.log(this.test2);
+  // }
 }

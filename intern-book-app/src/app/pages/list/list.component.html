@@ -9,6 +9,7 @@
         <input
           matInput
           id="name"
+          name="name"
           [(ngModel)]="book.name"
           placeholder="書籍名を記入"
         />
@@ -18,10 +19,10 @@
         <textarea
           matInput
           id="ara"
+          name="ara"
           [(ngModel)]="book.detail"
           placeholder="あらすじを記入"
-        >
-        </textarea>
+        ></textarea>
       </mat-form-field>
 
       <mat-form-field class="half-width">
@@ -29,6 +30,7 @@
         <input
           matInput
           id="ten"
+          name="ten"
           [(ngModel)]="book.evaluation"
           placeholder="評価点を記入"
         />
@@ -39,5 +41,11 @@
     <button mat-raised-button color="primary" (click)="test()">追加</button>
   </mat-card-actions>
 </mat-card>
+<!-- <input [(ngModel)]="test2" />
+<button (click)="clickTest()">テスト</button> -->
 
-<app-card *ngFor="let book of bookList" [book]="book" [date]="today"></app-card>
+<app-card
+  *ngFor="let book of bookList"
+  [aBook]="book"
+  [date]="today"
+></app-card>
