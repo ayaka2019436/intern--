@@ -37,6 +37,11 @@ export class ListComponent {
       detail: this.book.detail,
       evaluation: this.book.evaluation,
     });
+    this.book = {
+      name: '',
+      detail: '',
+      evaluation: 0,
+    };
   }
   Delete(book: Book) {
     this.bookList = this.bookList.filter((b) => b.name !== book.name);
