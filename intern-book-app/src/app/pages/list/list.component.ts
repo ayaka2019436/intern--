@@ -26,7 +26,7 @@ export class ListComponent {
     evaluation: 0,
   };
   today: string = '2023/03/22';
-  test() {
+  addBook() {
     this.bookList.push(this.book);
     this.book = {
       name: '',
@@ -34,7 +34,7 @@ export class ListComponent {
       evaluation: 0,
     };
   }
-  Delete(book: Book) {
+  deleteBook(book: Book) {
     this.bookList = this.bookList.filter((b) => b.name !== book.name);
   }
 }
