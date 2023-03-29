@@ -41,9 +41,8 @@
     <button mat-raised-button color="primary" (click)="addBook()">追加</button>
   </mat-card-actions>
 </mat-card>
-<!-- <input [(ngModel)]="test2" />
-<button (click)="clickTest()">テスト</button> -->
-<div class="Nodeta" *ngIf="!bookList || bookList.length === 0">
+
+<div class="Nodata" *ngIf="!bookList || bookList.length === 0">
   データがありません
 </div>
 <app-card
