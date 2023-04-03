@@ -1,13 +1,13 @@
-<mat-card *ngIf="aBook" class="card">
+<mat-card *ngIf="book" class="card">
   <mat-card-header>
-    <mat-card-title>{{ aBook.name }}</mat-card-title>
+    <mat-card-title>{{ book.name }}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <p class="textmin">{{ aBook.detail }}</p>
-    <p class="textmin">評価点：{{ aBook.evaluation }}点</p>
+    <p class="textmin">{{ book.detail }}</p>
+    <p class="textmin">評価点：{{ book.evaluation }}点</p>
     <p class="textmin">{{ date }}</p>
   </mat-card-content>
   <mat-card-actions align="end">
-    <button mat-raised-button color="warn" (click)="Delete()">削除</button>
+    <button mat-raised-button color="warn" (click)="delete()">削除</button>
   </mat-card-actions>
 </mat-card>

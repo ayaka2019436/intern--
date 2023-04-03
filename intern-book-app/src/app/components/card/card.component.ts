@@ -7,14 +7,14 @@ import { Book } from 'src/app/types/book';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent {
-  @Input() aBook: Book = {
+  @Input() book: Book = {
     name: '',
     detail: '',
     evaluation: 0,
   };
-  @Input() date?: string;
-  @Output() deleteBook = new EventEmitter<Book>();
-  Delete() {
-    this.deleteBook.emit(this.aBook);
+  @Input() date?: Date;
+  @Output() onDelete = new EventEmitter<Book>();
+  delete() {
+    this.onDelete.emit(this.book);
   }
 }

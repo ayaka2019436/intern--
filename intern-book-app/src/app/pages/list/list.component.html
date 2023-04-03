@@ -1,6 +1,6 @@
 <mat-card class="card">
   <mat-card-header>
-    <mat-card-title class="textmax"> 書籍登録 </mat-card-title>
+    <mat-card-title class="font-size-large"> 書籍登録 </mat-card-title>
   </mat-card-header>
   <form class="form">
     <mat-card-content>
@@ -29,8 +29,8 @@
         <mat-label>評価点</mat-label>
         <input
           matInput
-          id="score"
-          name="score"
+          id="evaluation"
+          name="evaluation"
           [(ngModel)]="book.evaluation"
           placeholder="評価点を記入"
         />
@@ -42,12 +42,13 @@
   </mat-card-actions>
 </mat-card>
 
-<div class="Nodata" *ngIf="!bookList || bookList.length === 0">
+<div class="no-data" *ngIf="!bookList || bookList.length === 0">
   データがありません
 </div>
+<!-- *ngIf="!bookList nullとかの時 -->
 <app-card
   *ngFor="let book of bookList"
-  [aBook]="book"
+  [book]="book"
   [date]="today"
-  (deleteBook)="deleteBook($event)"
+  (onDelete)="deleteBook($event)"
 ></app-card>
