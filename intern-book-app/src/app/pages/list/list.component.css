@@ -7,22 +7,32 @@
 .full-width {
   width: 100%;
 }
+
 .half-width {
   width: 50%;
 }
+
 .right {
   text-align: right;
 }
+
 .text {
   line-height: 2;
 }
+
 .card {
   margin: 30px;
 }
 
-.textmax {
+.font-size-large {
   font-size: 30px;
 }
-.textmin {
+
+.font-size-small {
   font-size: 12px;
+}
+
+.no-data {
+  font-size: 30px;
+  text-align: center;
 }

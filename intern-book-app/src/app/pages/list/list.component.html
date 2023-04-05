@@ -1,27 +1,54 @@
 <mat-card class="card">
   <mat-card-header>
-    <mat-card-title class="textmax"> 書籍登録 </mat-card-title>
+    <mat-card-title class="font-size-large"> 書籍登録 </mat-card-title>
   </mat-card-header>
   <form class="form">
     <mat-card-content>
       <mat-form-field class="full-width">
         <mat-label>書籍名</mat-label>
-        <input matInput placeholder="書籍名を記入" />
+        <input
+          matInput
+          id="name"
+          name="name"
+          [(ngModel)]="book.name"
+          placeholder="書籍名を記入"
+        />
       </mat-form-field>
       <mat-form-field class="full-width">
         <mat-label>あらすじ</mat-label>
-        <textarea matInput placeholder="あらすじを記入"></textarea>
+        <textarea
+          matInput
+          id="detail"
+          name="detail"
+          [(ngModel)]="book.detail"
+          placeholder="あらすじを記入"
+        ></textarea>
       </mat-form-field>
 
       <mat-form-field class="half-width">
         <mat-label>評価点</mat-label>
-        <input matInput placeholder="評価点を記入" />
+        <input
+          matInput
+          id="evaluation"
+          name="evaluation"
+          [(ngModel)]="book.evaluation"
+          placeholder="評価点を記入"
+        />
       </mat-form-field>
     </mat-card-content>
   </form>
   <mat-card-actions align="end">
-    <button mat-raised-button color="primary">追加</button>
+    <button mat-raised-button color="primary" (click)="addBook()">追加</button>
   </mat-card-actions>
 </mat-card>
 
-<app-card *ngFor="let book of bookList" [book]="book" [date]="today"></app-card>
+<div class="no-data" *ngIf="!bookList || bookList.length === 0">
+  データがありません
+</div>
+<!-- *ngIf="!bookList nullとかの時 -->
+<app-card
+  *ngFor="let book of bookList"
+  [book]="book"
+  [date]="today"
+  (onDelete)="deleteBook($event)"
+></app-card>
