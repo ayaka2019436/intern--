@@ -5,7 +5,7 @@
   <mat-card-content>
     <p class="textmin">{{ book.detail }}</p>
     <p class="textmin">評価点：{{ book.evaluation }}点</p>
-    <p class="textmin">{{ date }}</p>
+    <p class="textmin">{{ date | date : "yyyy-MM-dd" }}</p>
   </mat-card-content>
   <mat-card-actions align="end">
     <button mat-raised-button color="warn" (click)="delete()">削除</button>

@@ -13,12 +13,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CardComponent } from './components/card/card.component';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule } from '@angular/forms';
+import { MessageComponent } from './message/message.component'; // <-- NgModel lives here
 
 const ROUTE_TABLE: Routes = [{ path: '', component: ListComponent }];
 
 @NgModule({
-  declarations: [AppComponent, ListComponent, ToolbarComponent, CardComponent],
+  declarations: [
+    AppComponent,
+    ListComponent,
+    ToolbarComponent,
+    CardComponent,
+    MessageComponent,
+  ],
   imports: [
     BrowserModule,
     MatCardModule,

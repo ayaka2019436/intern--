@@ -1,6 +1,6 @@
-import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { Book } from 'src/app/types/book';
+import { MessageService } from 'src/app/message.service';
 
 @Component({
   selector: 'app-list',
@@ -8,6 +8,7 @@ import { Book } from 'src/app/types/book';
   styleUrls: ['./list.component.css'],
 })
 export class ListComponent {
+  constructor(private messageService: MessageService) {}
   bookList: Book[] = [
     {
       name: 'アンドロイドは電気羊の夢を見るか？',
@@ -27,14 +28,18 @@ export class ListComponent {
     evaluation: null,
   };
   today: Date = new Date();
+
   addBook() {
     this.bookList.push({ ...this.book });
+    console.log(this.book.name);
+    this.messageService.add(this.book.name + 'の本を追加しました。');
     //{...}スプレット構文中身を展開する{}で包み直す
     this.book = {
       name: '',
       detail: '',
       evaluation: null,
     };
+
     // 初期化の方法としての別パターン 残しておく！
     // this.book.name = '';
     // this.book.detail = '';
@@ -44,6 +49,7 @@ export class ListComponent {
   deleteBook(prop: Book) {
     const confirmation = window.confirm('本当に削除しますか？');
     if (confirmation) {
+      this.messageService.add(prop.name + 'の本を削除しました。');
       this.bookList = this.bookList.filter((book) => book.name !== prop.name);
       //filter()配列に使うことができる。中身を一件ずつ比較してTrueの場合データを使用する。データの件数分まわる。
       //filterのコードと同じ処理
@@ -51,7 +57,7 @@ export class ListComponent {
       for (let index = 0; index < this.bookList.length; index++) {
         const element = this.bookList[index];
         if (this.bookList[index].name !== prop.name) {
-          // 勉強用
+          // 勉強用ß
           // _bookList.push({
           //   name: this.bookList[index].name,
           //   detail: this.bookList[index].detail,

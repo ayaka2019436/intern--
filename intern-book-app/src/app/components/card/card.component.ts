@@ -13,6 +13,7 @@ export class CardComponent {
     evaluation: 0,
   };
   @Input() date?: Date;
+
   @Output() onDelete = new EventEmitter<Book>();
   delete() {
     this.onDelete.emit(this.book);
